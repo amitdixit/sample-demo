@@ -1,0 +1,42 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-6" style="align-content:center;">
+            <form>
+                <div class="mb-3">
+                    <label for="messageInput" class="form-label">Message</label>
+                    <textarea class="form-control" id="messageInput"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="button" id="sendButton" value="Send Message To All" class="btn btn-warning" />
+                </div>
+
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <select id="ddlUserList" name="loggedInUsers" class="form-select">
+                                <option value="-1">All</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <input type="button" id="sendButton1" value="Send Message To Selected User" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header bg-info">Chat Room</div>
+                <div class="card-body">
+                    <ul id="messagesList" style="list-style-type: none;margin: 0;padding: 0;" ></ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
